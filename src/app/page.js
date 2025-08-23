@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import HeroName from './components/HeroName';
 
 export default function Home() {
 
@@ -9,9 +10,7 @@ export default function Home() {
 
         {/* Main Content */}
         <div className=' w-full h-full flex justify-center items-center flex-col top-0 left-0'>
-          <div className='name text-[15vw]'>
-            biswas
-          </div>
+          <HeroName />
         </div>
 
 

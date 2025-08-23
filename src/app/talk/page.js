@@ -9,7 +9,7 @@ const boldonse = Boldonse({
 function Talk() {
   return (
     <>
-    <div className='w-[100vw] h-max bg-violet-500 flex flex-col justify-start items-center relative'>
+    <div className='w-[100vw] h-max bg-violet-500 flex flex-col justify-start items-center relative overflow-hidden'>
 
         <div className={`text-[18vw] text-zinc-950 opacity-15 font-extrabold ${boldonse.className}`}>
             DIGANTA
