@@ -2,58 +2,34 @@
 
 import React from 'react'
 import Image from 'next/image'
-import { useEffect } from 'react'
 import gsap from 'gsap'
-import { usePathname } from 'next/navigation'
 import SplitType from 'split-type'
+import { useGSAP } from '@gsap/react'
 
 function About() {
 
-  const pathName = usePathname()
-
-  useEffect(() => {
-
-    gsap.killTweensOf(".image, .texts");
-
-    gsap.set(".image, .texts", { clearProps: "all" });
-
-    gsap.from(".image",{
-      y:20,
-      opacity:0,
-      duration:1.5,
-      delay:.5
-
+  
+  useGSAP(() => {
+    gsap.from(".image", {
+      y: 20,
+      opacity: 0,
+      duration: 1.5,
+      delay: 0.5,
+      ease: "power2.out"
+      
     })
+    const split = new SplitType(".texts")
 
-    // gsap.from(".texts",{
-    //   y:20,
-    //   opacity:0,
-    //   duration:1.5,
-    //   delay:.5
-
-    // })
-
-    const split = new SplitType(".texts", { types: "words" }) 
-    // change to "lines" or "chars" if you want line/letter animations
-
-    // Reset first
-    gsap.set(split.words, { opacity: 0, y: 20 })
-
-    // Animate word by word
-    gsap.to(split.words, {
-      opacity: 1,
-      y: 0,
+    gsap.from(split.lines, {
+      opacity: 0,
+      y: 20,
       duration: 0.8,
-      stagger: 0.05, // controls delay between words
+      delay:0.5,
+      stagger: 0.1, // controls delay between words
       ease: "power2.out"
     })
+  })
 
-    return () => {
-      split.revert() // cleanup when navigating away
-    }
-
-  }, [pathName])
-  
 
   return (
     <>

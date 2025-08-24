@@ -2,7 +2,7 @@ import React from 'react'
 
 function Works() {
   return (
-    <div>This is the work page</div>
+    <div className='w-full h-[100vh] flex justify-center items-center'>This is the work page</div>
   )
 }
 

@@ -11,7 +11,12 @@ export default function Home() {
         {/* Main Content */}
         <div className=' w-full h-full flex justify-center items-center flex-col top-0 left-0'>
           <HeroName />
+          {/* <p>your friendly neighborhood web developer</p>
+          <div className='border-1 mt-8 p-2 rounded-xl backdrop-blur-2xl bg-transparent cursor-pointer border-violet-600'>Hire Me</div> */}
+          
+
         </div>
+
 
 
 

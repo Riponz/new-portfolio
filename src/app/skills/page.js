@@ -2,7 +2,7 @@ import React from 'react'
 
 function Skills() {
   return (
-    <div>This is the skills page</div>
+    <div className='w-full h-[100vh] flex justify-center items-center'>This is the skills page</div>
   )
 }
 

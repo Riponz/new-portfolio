@@ -1,42 +1,47 @@
 "use client"
 
-import React, { useEffect } from 'react'
+import React from 'react'
 import gsap from 'gsap'
 import SplitType from 'split-type'
-import { usePathname } from 'next/navigation'
+import { useGSAP } from '@gsap/react'
 
 function HeroName() {
-    const pathName = usePathname()
 
-    useEffect(() => {
-        gsap.killTweensOf(".name");
+    const timeline = gsap.timeline()
 
-    gsap.set(".name", { clearProps: "all" });
+    useGSAP(() => {
+        const split = new SplitType(".name")
 
-      const split = new SplitType(".name", { types: "chars" }) 
-    // change to "lines" or "chars" if you want line/letter animations
+        timeline.from(split.chars, {
+            opacity: 0,
+            y: 20,
+            duration: 0.7,
+            delay: 0.3,
+            stagger: 0.1
+        })
 
-    // Reset first
-    gsap.set(split.words, { opacity: 0, y: 20 })
+        timeline.from(".tag",{
+            y:20,
+            opacity:0,
+            duration:0.8
+        })
 
-    // Animate word by word
-    gsap.to(split.words, {
-      opacity: 1,
-      y: 0,
-      duration: 0.8,
-      stagger: 0.05, // controls delay between words
-      ease: "power2.out"
+        timeline.from(".hire",{
+            y:20,
+            opacity:0,
+            duration:0.8
+        })
     })
 
-    return () => {
-      split.revert() // cleanup when navigating away
-    }
-    }, [pathName])
-    
     return (
-        <div className='name text-[15vw]'>
-            biswas
-        </div>
+        <>
+            <div className='name text-[15vw]'>
+                biswas
+            </div>
+            <p className='tag'>your friendly neighborhood web developer</p>
+            <div className='hire border-1 mt-8 p-2 rounded-xl backdrop-blur-2xl bg-transparent cursor-pointer border-violet-600'>Hire Me</div>
+
+        </>
     )
 }
 

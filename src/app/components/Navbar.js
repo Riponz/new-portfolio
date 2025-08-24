@@ -4,8 +4,12 @@ import Link from 'next/link'
 import React from 'react'
 import { usePathname } from 'next/navigation'
 import { Dot } from 'lucide-react';
+import { Permanent_Marker } from 'next/font/google';
 
 
+const logoFont = Permanent_Marker({
+    weight:['400']
+})
 
 function Navbar() {
 
@@ -13,7 +17,7 @@ function Navbar() {
     console.log(pathName)
 
     return (
-        <nav className='text-md w-full h-[10vh] flex justify-evenly items-center z-10 absolute'>
+        <nav className='text-md w-full h-[10vh] flex justify-evenly items-center z-10 fixed'>
             <div className='w-full h-full flex justify-center items-center'>
                 <Link href="/works" className='flex justify-center items-center gap-0.2'>
                     {pathName == "/works" ? (
@@ -35,7 +39,7 @@ function Navbar() {
                 </Link>
             </div>
             <div className='w-full h-full flex justify-center items-center'>
-                <Link href="/" className='text-xl font-bold'>
+                <Link href="/" className= {`text-xl font-bold ${logoFont.className}`}>
                     {"<//>"}
                 </Link>
             </div>
