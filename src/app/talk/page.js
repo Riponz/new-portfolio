@@ -1,12 +1,21 @@
+"use client"
+
 import React from 'react'
 import { Boldonse } from "@next/font/google"
 import ContactForm from '../components/ContactForm'
+import gsap from 'gsap'
+import { useGSAP } from '@gsap/react'
+import ScrollTrigger from 'gsap/ScrollTrigger'
+
+gsap.registerPlugin(ScrollTrigger)
 
 const boldonse = Boldonse({
     weight: ["400"]
 })
 
 function Talk() {
+
+
   return (
     <>
     <div className='w-[100%] h-max bg-violet-500 flex flex-col justify-start items-center relative overflow-hidden'>
@@ -16,6 +25,7 @@ function Talk() {
         </div>
 
         <ContactForm />
+
 
     </div>
     </>
