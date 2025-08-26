@@ -17,7 +17,7 @@ function Navbar() {
     console.log(pathName)
 
     return (
-        <nav className='text-md w-full h-[10vh] flex justify-evenly items-center z-10 fixed'>
+        <nav className='text-[3vw] md:text-[2vw] w-full h-[10vh] flex justify-evenly items-center z-10 fixed'>
             <div className='w-full h-full flex justify-center items-center'>
                 <Link href="/works" className='flex justify-center items-center gap-0.2'>
                     {pathName == "/works" ? (

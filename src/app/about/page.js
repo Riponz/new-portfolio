@@ -33,10 +33,10 @@ function About() {
 
   return (
     <>
-      <div className='w-[100vw] h-max'>
-        <div className='hero w-full h-[100vh] flex justify-center items-center backdrop-blur-2xl'>
+      <div className='w-[100vw] h-max '>
+        <div className='hero w-full min-h-[100vh] flex flex-col  lg:flex-row justify-start lg:justify-center gap-5 items-center backdrop-blur-2xl'>
           {/* left */}
-          <div className='w-full h-[100vh] px-4 text-2xl flex flex-col gap-5 justify-center items-center'>
+          <div className='mt-20 lg:mt-0 w-full min-h-[100vh] px-4 text-2xl flex flex-col gap-5 justify-start lg:justify-center items-center'>
             <p className='texts'>YOUR FRIENDLY NEIGHBOURHOOD SOFTWARE DEVELOPER WITH EXPERTISE BUILDING CUSTOM WEBSITES USING REACT.JS AND NEXT.JS. WELL-VERSED IN MANAGING DATABASES WITH SKILLS SPANNING MYSQL AND MONGODB, ALONG WITH BACKEND DEVELOPMENT USING SPRING BOOT, NODE.JS AND FASTAPI.</p>
 
             <p className='texts'>ENTHUSIASTIC WEB WIZARD AND CODING CONJURER WITH COLLABORATION SUPERPOWERS! EQUIPPED WITH THE ABILITY TO TURN COFFEE INTO CODE AND BRAINSTORMING SESSIONS INTO DIGITAL MAGIC. LET'S TEAM UP AND TURN YOUR DREAMS INTO DIGITAL AWESOMENESS - NO WANDS REQUIRED!</p>

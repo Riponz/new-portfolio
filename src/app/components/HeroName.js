@@ -42,15 +42,10 @@ function HeroName() {
 
     return (
         <>
-            {/* <div className='bg-transparent flex justify-center items-center w-[100vw] h-[100vh]'>
-                <Spline
-                    scene="https://prod.spline.design/B8uJGluP34LajqnG/scene.splinecode"
-                />
-            </div> */}
-            <div className='name text-[20vw] text-violet-300'>
-                diganta
+            <div className=' flex justify-center items-center w-[100vw] text-[20vw] text-violet-300'>
+                <p className='name'>diganta</p>
             </div>
-            <p className='tag'>your friendly neighborhood web developer</p>
+            <p className='w-full tag text-[4vw] md:text-[2vw] wrap-anywhere text-center'>your friendly neighborhood web developer</p>
             <div onClick={handleClick} className='hire border-1 mt-8 p-2 rounded-xl backdrop-blur-2xl bg-transparent cursor-pointer border-violet-600'>Hire Me</div>
 
         </>
