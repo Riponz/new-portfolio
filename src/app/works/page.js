@@ -14,6 +14,13 @@ function Works() {
 
   useGSAP(() => {
 
+    gsap.from(".quote-start",{
+      y:30,
+      opacity:0,
+      duration:1,
+      stagger:0.2
+    })
+
     gsap.registerPlugin(ScrollTrigger)
 
     const works = gsap.utils.toArray(".work")
@@ -124,7 +131,7 @@ function Works() {
 
   return (
     <>
-      <div className='quote w-full h-[100vh] flex flex-col justify-center items-center text-[3vw] wrap-anywhere text-center'>
+      <div className='quote-start w-full h-[100vh] flex flex-col justify-center items-center text-[3vw] wrap-anywhere text-center'>
         Each work is proof that imagination can become code.
         <ArrowDown />
       </div>
