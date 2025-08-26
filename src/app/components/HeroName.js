@@ -8,6 +8,12 @@ import { useGSAP } from '@gsap/react'
 
 function HeroName() {
 
+    const handleClick = () => {
+        const email = "biswadiganta2001@gmail.com"; // put your email here
+        const url = `https://mail.google.com/mail/?view=cm&fs=1&to=${email}`;
+        window.open(url, "_blank");
+    };
+
     const timeline = gsap.timeline()
 
     useGSAP(() => {
@@ -45,7 +51,7 @@ function HeroName() {
                 diganta
             </div>
             <p className='tag'>your friendly neighborhood web developer</p>
-            <div className='hire border-1 mt-8 p-2 rounded-xl backdrop-blur-2xl bg-transparent cursor-pointer border-violet-600'>Hire Me</div>
+            <div onClick={handleClick} className='hire border-1 mt-8 p-2 rounded-xl backdrop-blur-2xl bg-transparent cursor-pointer border-violet-600'>Hire Me</div>
 
         </>
     )

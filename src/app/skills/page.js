@@ -13,20 +13,19 @@ function Skills() {
 
     gsap.to(".slider", {
       x:"-100%",
-
       scrollTrigger: {
         trigger: ".slider",
         start: "top 40%",
         scrub: 2,
         pin:true,
-        pinSpacing:true
+        pinSpacing:true,
       }
 
     });
   })
   return (
     <>
-      <div className='w-[100vw] h-max flex justify-start items-start flex-col'>
+      <div className='w-[100vw] h-max flex justify-start items-start flex-col overflow-hidden'>
         <div className='quote w-full h-[100vh] flex justify-center items-center text-xl'>
           Your skills are the silent power behind every bold creation
         </div>

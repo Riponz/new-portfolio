@@ -15,7 +15,6 @@ const boldonse = Boldonse({
 
 function Talk() {
 
-
   return (
     <>
     <div className='w-[100%] h-max bg-violet-500 flex flex-col justify-start items-center relative overflow-hidden'>
