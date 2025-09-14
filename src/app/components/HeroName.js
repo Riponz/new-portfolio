@@ -4,7 +4,11 @@ import React from 'react'
 import gsap from 'gsap'
 import SplitType from 'split-type'
 import { useGSAP } from '@gsap/react'
-// import Spline from '@splinetool/react-spline/next';
+import { Bodoni_Moda } from 'next/font/google'
+
+const bodoniFont = Bodoni_Moda({
+    weight: ['500']
+})
 
 function HeroName() {
 
@@ -43,7 +47,7 @@ function HeroName() {
     return (
         <>
             <div className=' flex justify-center items-center w-[100vw] text-[20vw] text-violet-300'>
-                <p className='name'>diganta</p>
+                <p className={`name ${bodoniFont.className}`}>diganta</p>
             </div>
             <p className='w-full tag text-[4vw] md:text-[2vw] wrap-anywhere text-center'>your friendly neighborhood web developer</p>
             <div onClick={handleClick} className='hire border-1 mt-8 p-2 rounded-xl backdrop-blur-2xl bg-transparent cursor-pointer border-violet-600'>Hire Me</div>

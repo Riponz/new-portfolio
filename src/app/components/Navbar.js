@@ -4,10 +4,10 @@ import Link from 'next/link'
 import React from 'react'
 import { usePathname } from 'next/navigation'
 import { Dot } from 'lucide-react';
-import { Permanent_Marker } from 'next/font/google';
+import { Inter } from 'next/font/google';
 
 
-const logoFont = Permanent_Marker({
+const logoFont = Inter({
     weight:['400']
 })
 
