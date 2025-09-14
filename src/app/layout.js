@@ -1,13 +1,5 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import { Inter } from 'next/font/google'
-
-const bodoni = Inter({
-  weight: ['500']
-})
-
-import Navbar from "./components/Navbar";
-import DarkVeil from "./components/DarkVeil";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -65,12 +57,8 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${bodoni.className} antialiased relative`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased relative`}
       >
-        <div className='w-full h-full top-0 left-0 fixed z-[-1]'>
-          <DarkVeil />
-        </div>
-        <Navbar />
         {children}
       </body>
     </html>
